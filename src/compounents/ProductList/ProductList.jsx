@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {getProductList} from "../../redux/actions/productsListAC";
 import ProductListItem from "../ProductListItem/ProductListItem";
+import {clearProduct} from "../../redux/actions/productAC";
 
 const ProductList = () => {
     const dispatch = useDispatch()
@@ -9,6 +10,7 @@ const ProductList = () => {
 
     useEffect(() => {
         dispatch(getProductList())
+        dispatch(clearProduct())
     }, [dispatch ,products])
 
     return (

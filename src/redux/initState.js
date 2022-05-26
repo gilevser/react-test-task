@@ -1,5 +1,6 @@
 export const initState = {
     productsList : [],
     product : {},
-    sizes: []
+    sizes: [],
+    selectInput : 'Выберите...'
 }
